@@ -73,7 +73,7 @@ Opciones:
 
 ### Repositorio GitHub
 
-1. Hacer fork del repositorio: [react-native-test](https://github.com/USERNAME/react-native-test)
+1. Hacer fork del repositorio: [Kambista-challenge-app](https://github.com/USERNAME/Kambista-challenge-app)
 2. Clonar el fork:
    ```
    git clone git@github.com:USERNAME/FORKED-PROJECT.git
