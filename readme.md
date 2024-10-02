@@ -8,7 +8,7 @@ Esta prueba técnica consiste en desarrollar una aplicación móvil en **React N
 
 Para acceder al diseño detallado de la aplicación, por favor utiliza el siguiente enlace de Figma:
 
-[Enlace al diseño en Figma](https://www.figma.com/file/XXXXXXXXXXXXX)
+[Enlace al diseño en Figma](https://www.figma.com/design/0r7lOY04Vv3Ht9UJItO7yX/Prueba?node-id=0-1&node-type=canvas&t=xY3A9Vp4Xe4zmQCW-0)
 
 Este diseño proporciona una guía visual para la implementación de la interfaz de usuario y el flujo de la aplicación.
 
@@ -19,8 +19,8 @@ Este diseño proporciona una guía visual para la implementación de la interfaz
 - Implementación de Expo, Tailwind CSS y TypeScript
 - Simulación de la API de Kambista para conversión de divisas
 - Diseño responsive adaptable a diferentes tamaños de pantalla móvil
-- Manejo del estado global (Prop Drilling, Context API o Zustand)
-- Generación de APK funcional
+- Manejo del estado global (usando Prop Drilling, Context API o Zustand)
+- Generación del APK funcional
 
 ## Requerimientos de Diseño y Funcionalidad
 
@@ -28,7 +28,7 @@ Este diseño proporciona una guía visual para la implementación de la interfaz
 
 1. **Pantalla de Inicio de Sesión/Registro**
 2. **Pantalla de Operaciones de Compra/Venta de Divisas**
-   - Calculadora de divisas (PEN a USD)
+   - Calculadora de divisas (Soles a Dólares)
    - Simulación de llamada a API de Kambista
 3. **Pantalla de Funcionalidades**
 4. **Formulario de Creación de Cuenta**
@@ -40,18 +40,18 @@ Implementar un menú de navegación inferior para cambiar entre secciones.
 
 ## Funcionalidad Requerida
 
-- Diseño responsive adaptable a diferentes tamaños de pantalla
-- Simulación de calculadora de divisas con API de Kambista
+- Diseño responsive adaptable a diferentes tamaños de pantalla.
+- Simulación de calculadora de divisas con API de Kambista.
 - Navegación fluida entre pantallas
-- Manejo de estado global
+- Manejo de estado global.
 
 ## Requisitos Técnicos
 
-- React Native con Expo
-- Tailwind CSS para estilos
-- TypeScript para tipado robusto
-- Simulación de API usando Axios o React Query
-- Gestión del estado global (Prop Drilling, Context API o Zustand)
+- React Native con Expo.
+- Tailwind CSS para estilos.
+- TypeScript para tipado robusto.
+- Simulación de API usando Axios, React Query o alguna otra librería.
+- Gestión del estado global (Prop Drilling, Context API o Zustand).
 
 ## Simulación de la API
 
@@ -84,10 +84,6 @@ Opciones:
    ```
 4. Realizar commits frecuentes
 5. Crear un Pull Request y notificar a talentohumano@kambista.com
-
-### Archivo Comprimido
-
-Enviar código fuente comprimido (.zip o .rar) a talentohumano@kambista.com
 
 ### APK
 
