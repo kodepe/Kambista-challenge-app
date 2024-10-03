@@ -20,6 +20,7 @@ const Input = ({
         placeholder={placeholer}
         mode="outlined"
         className="rounded-xl"
+        contentStyle={InputStyleSheet.contentStyle}
         outlineStyle={InputStyleSheet.inputOutline}
         {...RegisterFormConfig}
       />

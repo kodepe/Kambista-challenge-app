@@ -6,7 +6,7 @@ import { DisclaimerStyleSheet } from "./styles";
 const Disclaimer = () => {
   return (
     <View
-      className="flex-row items-start gap-4 w-full my-4"
+      className="flex-row items-start gap-4 w-full my-4 rounded-lg"
       style={[DisclaimerStyleSheet.container]}
     >
       <AntDesign name="questioncircleo" size={24} color={'#082774'} />

@@ -18,12 +18,10 @@ const SelectInputDialog = ({
   data,
   label,
   containerClassName,
+  value,
+  setValue,
 }: SelectProps) => {
   const [visible, setVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState({
-    label: "",
-    value: "",
-  });
 
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
@@ -33,13 +31,20 @@ const SelectInputDialog = ({
       <Text className="mb-2">{label}</Text>
       <TextInput
         mode="outlined"
-        value={selectedOption.label}
+        value={value.label}
         placeholder={placeholder}
+        contentStyle={InputStyleSheet.contentStyle}
         className="rounded-xl"
         outlineStyle={InputStyleSheet.inputOutline}
         {...RegisterFormConfig}
         onFocus={showDialog}
-        right={<Entypo name="chevron-down" size={24} color="black" />}
+        right={
+          <TextInput.Icon
+            icon="chevron-down"
+            color={"#686868"}
+            onPress={showDialog}
+          />
+        }
         editable={false}
         onPress={showDialog}
       />
@@ -53,7 +58,7 @@ const SelectInputDialog = ({
                 key={item.value}
                 title={item.label}
                 onPress={() => {
-                  setSelectedOption(item);
+                  setValue(item);
                   hideDialog();
                 }}
               />

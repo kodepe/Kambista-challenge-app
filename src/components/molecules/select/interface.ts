@@ -8,4 +8,6 @@ export interface SelectProps {
   placeholder: string;
   containerClassName?: string | undefined;
   label: string;
+  value: SelectItemProps;
+  setValue: (value: SelectItemProps) => void;
 }
