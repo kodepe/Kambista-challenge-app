@@ -1,4 +1,4 @@
-import { RegisterFormProps } from "./interface";
+import { RegisterFormErrosProps, RegisterFormProps } from "./interface";
 
 export const RegisterFormDefault: RegisterFormProps = {
   documentNumber: "",
@@ -14,4 +14,13 @@ export const RegisterFormDefault: RegisterFormProps = {
     label: "",
     value: "",
   },
+};
+export const RegisterFormErrorsDefault: RegisterFormErrosProps = {
+  documentNumber: "",
+  documentType: "",
+  fullName: "",
+  phone: "",
+  policy: "",
+  terms: "",
+  moneychanger: "",
 };

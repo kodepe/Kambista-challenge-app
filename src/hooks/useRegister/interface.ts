@@ -9,3 +9,12 @@ export interface RegisterFormProps {
   terms: boolean;
   policy: boolean;
 }
+export interface RegisterFormErrosProps {
+  fullName: string;
+  documentType: string;
+  documentNumber: string;
+  phone: string;
+  moneychanger: string;
+  terms: string;
+  policy: string;
+}

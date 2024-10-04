@@ -9,4 +9,12 @@ export const RegisterFormStyleSheet = StyleSheet.create({
   checkboxBold: {
     fontWeight: "bold",
   },
+  errorText: {
+    color: "red",
+  },
+  button: {
+    borderRadius: 4,
+    color: "#060F26",
+    height: 50,
+  },
 });

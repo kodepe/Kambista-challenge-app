@@ -8,18 +8,20 @@ import Checkbox from "../../molecules/checkbox";
 
 import { RegisterFormStyleSheet } from "./styles";
 import { UseRegister } from "../../../hooks/useRegister";
+import { Button } from "react-native-paper";
 
 const RegisterForm = () => {
-  const { form, setForm } = UseRegister();
-
+  const { form, setForm, submit, errors, setErrors } = UseRegister();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View className="flex-col">
         <RegisterFormHeader />
         <Input
+          error={errors.fullName}
           value={form.fullName}
           onChangeText={(value) => {
             setForm({ ...form, fullName: value });
+            setErrors({ ...errors, fullName: "" });
           }}
           containerClassName="mb-4"
           label="Nombres completos"
@@ -27,9 +29,11 @@ const RegisterForm = () => {
         />
         <View className=" flex-row items-center my-2 gap-4">
           <SelectInputDialog
+            error={errors.documentType}
             value={form.documentType}
             setValue={(value) => {
               setForm({ ...form, documentType: value });
+              setErrors({ ...errors, documentType: "" });
             }}
             containerClassName={"flex-1"}
             label="Documento"
@@ -37,9 +41,11 @@ const RegisterForm = () => {
             data={DocumentsTypes}
           />
           <Input
+            error={errors.documentNumber}
             value={form.documentNumber}
             onChangeText={(value) => {
               setForm({ ...form, documentNumber: value });
+              setErrors({ ...errors, documentNumber: "" });
             }}
             containerClassName={"flex-1"}
             label="Número"
@@ -48,9 +54,11 @@ const RegisterForm = () => {
         </View>
         <Disclaimer />
         <Input
+          error={errors.phone}
           value={form.phone}
           onChangeText={(value) => {
             setForm({ ...form, phone: value });
+            setErrors({ ...errors, phone: "" });
           }}
           containerClassName="mt-2 mb-6"
           label="Número de celular"
@@ -68,12 +76,16 @@ const RegisterForm = () => {
         />
         <View className="my-4">
           <Checkbox
+            error={errors.terms}
             onPress={() => {
               setForm({ ...form, terms: !form.terms });
+              setErrors({ ...errors, terms: "" });
             }}
             value={form.terms}
             label={
-              <Text>
+              <Text
+                style={errors?.terms ? RegisterFormStyleSheet.errorText : {}}
+              >
                 {"He leído y acepto los "}
                 <Text style={RegisterFormStyleSheet.checkboxBold}>
                   Términos y condiciones
@@ -82,12 +94,16 @@ const RegisterForm = () => {
             }
           />
           <Checkbox
+            error={errors.policy}
             value={form.policy}
             onPress={() => {
               setForm({ ...form, policy: !form.policy });
+              setErrors({ ...errors, policy: "" });
             }}
             label={
-              <Text>
+              <Text
+                style={errors?.policy ? RegisterFormStyleSheet.errorText : {}}
+              >
                 {"Acepto de manera expresa e informada la "}
                 <Text style={RegisterFormStyleSheet.checkboxBold}>
                   Política de Tratamiento de Datos personales de Kambista
@@ -96,6 +112,15 @@ const RegisterForm = () => {
             }
           />
         </View>
+        <Button
+          onPress={submit}
+          buttonColor="#00E3C2"
+          textColor="#060F26"
+          contentStyle={RegisterFormStyleSheet.button}
+          style={RegisterFormStyleSheet.button}
+        >
+          {"Continuar"}
+        </Button>
       </View>
     </ScrollView>
   );

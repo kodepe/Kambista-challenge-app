@@ -31,4 +31,10 @@ export const CheckboxStyleSheet = StyleSheet.create({
     backgroundColor: "#E8F3FEBF",
     borderColor: "#456DD3",
   },
+  boxError: {
+    borderColor: "red",
+  },
+  labelError: {
+    color: "red",
+  },
 });

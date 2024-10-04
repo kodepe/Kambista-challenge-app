@@ -4,4 +4,5 @@ export interface InputProps {
   label: string;
   value?: string | undefined;
   containerClassName?: string;
+  error?: string;
 }

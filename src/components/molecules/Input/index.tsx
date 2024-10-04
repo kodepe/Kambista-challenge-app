@@ -10,10 +10,16 @@ const Input = ({
   label,
   value,
   containerClassName,
+  error,
 }: InputProps) => {
   return (
     <View className={containerClassName}>
-      <Text className="mb-2">{label}</Text>
+      <Text
+        style={error ? InputStyleSheet.labelError : InputStyleSheet.labelCommon}
+        className="mb-2"
+      >
+        {label}
+      </Text>
       <TextInput
         value={value}
         onChangeText={onChangeText}
@@ -21,7 +27,10 @@ const Input = ({
         mode="outlined"
         className="rounded-xl"
         contentStyle={InputStyleSheet.contentStyle}
-        outlineStyle={InputStyleSheet.inputOutline}
+        outlineStyle={[
+          InputStyleSheet.inputOutline,
+          error ? InputStyleSheet.error : InputStyleSheet.common,
+        ]}
         {...RegisterFormConfig}
       />
     </View>

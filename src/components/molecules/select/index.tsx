@@ -19,6 +19,7 @@ const SelectInputDialog = ({
   label,
   containerClassName,
   value,
+  error,
   setValue,
 }: SelectProps) => {
   const [visible, setVisible] = useState(false);
@@ -28,14 +29,22 @@ const SelectInputDialog = ({
 
   return (
     <View className={containerClassName}>
-      <Text className="mb-2">{label}</Text>
+      <Text
+        className="mb-2"
+        style={error ? InputStyleSheet.labelError : InputStyleSheet.labelCommon}
+      >
+        {label}
+      </Text>
       <TextInput
         mode="outlined"
         value={value.label}
         placeholder={placeholder}
         contentStyle={InputStyleSheet.contentStyle}
         className="rounded-xl"
-        outlineStyle={InputStyleSheet.inputOutline}
+        outlineStyle={[
+          InputStyleSheet.inputOutline,
+          error ? InputStyleSheet.error : InputStyleSheet.common,
+        ]}
         {...RegisterFormConfig}
         onFocus={showDialog}
         right={

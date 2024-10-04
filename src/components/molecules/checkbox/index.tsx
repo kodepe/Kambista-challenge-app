@@ -3,13 +3,15 @@ import { CheckboxProps } from "./interface";
 import { CheckboxStyleSheet } from "./style";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-const Checkbox = ({ value, onPress, label }: CheckboxProps) => {
+const Checkbox = ({ value, onPress, label, error }: CheckboxProps) => {
   return (
     <View style={CheckboxStyleSheet.container}>
       <Pressable
         style={[
           CheckboxStyleSheet.box,
-          value
+          error
+            ? CheckboxStyleSheet.boxError
+            : value
             ? CheckboxStyleSheet.boxSelected
             : CheckboxStyleSheet.boxNoSelected,
         ]}
