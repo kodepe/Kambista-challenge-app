@@ -9,6 +9,7 @@ import Checkbox from "../../molecules/checkbox";
 import { RegisterFormStyleSheet } from "./styles";
 import { UseRegister } from "../../../hooks/useRegister";
 import { Button } from "react-native-paper";
+import { DisclaimerConstants } from "../../molecules/disclaimer/constants";
 
 const RegisterForm = () => {
   const { form, setForm, submit, errors, setErrors } = UseRegister();
@@ -52,7 +53,7 @@ const RegisterForm = () => {
             placeholer="Número Doc"
           />
         </View>
-        <Disclaimer />
+        <Disclaimer text={DisclaimerConstants.registerForm} />
         <Input
           error={errors.phone}
           value={form.phone}

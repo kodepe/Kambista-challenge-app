@@ -24,9 +24,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     try {
       removeData(AsyncStorageData.session);
       setSession(null);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   useMount(() => {
     getProfile();

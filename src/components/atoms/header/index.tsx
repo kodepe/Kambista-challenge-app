@@ -8,13 +8,21 @@ import Chevron from "./../../../../assets/images/header/Chevron.png";
 import XCircle from "./../../../../assets/images/header/x-circle.png";
 import { AppHeaderProps } from "./interface";
 import { UseAuthContext } from "../../../contexts/auth/auth-hook";
+import { useNavigation } from "@react-navigation/native";
 export const AppHeader = ({ close, goBack, logo }: AppHeaderProps) => {
   const { logout } = UseAuthContext();
+  const navigation = useNavigation();
   return (
     <View className="relative">
       <View className="absolute z-10 items-center justify-between flex-row w-full pl-4">
         {goBack && (
-          <Pressable>
+          <Pressable
+            onPress={() => {
+              if (navigation.canGoBack()) {
+                navigation.goBack();
+              }
+            }}
+          >
             <Image source={Chevron} />
           </Pressable>
         )}

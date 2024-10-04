@@ -9,6 +9,5 @@ export const DisclaimerStyleSheet = StyleSheet.create({
   },
   text: {
     fontSize: 12,
-    color: "#456DD3CC",
   },
 });

@@ -1,11 +1,16 @@
-import { Text, View } from "react-native";
-import { AppHeader } from "../../atoms/header";
+import { View } from "react-native";
+import { BottomBar } from "../../atoms/bottom-bar";
+import { ExchangeForm } from "../../organisms/exchange-form";
+import { HeaderLight } from "../../atoms/header/header-light";
 
 const HomePage = () => {
   return (
-    <View>
-      <AppHeader goBack={() => {}} close={() => {}} logo />
-      <Text>Home Page</Text>
+    <View className=" flex-1">
+      <HeaderLight />
+      <View className="flex-1">
+        <ExchangeForm />
+      </View>
+      <BottomBar />
     </View>
   );
 };
