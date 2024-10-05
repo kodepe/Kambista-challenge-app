@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AuthContext } from "./auth-context";
-import { RegisterFormDefault } from "../../hooks/useRegister/constants";
 import { RegisterFormProps } from "../../hooks/useRegister/interface";
 import { getStoreData, removeData, storeData } from "../../utils/asyncstorage";
 import { AsyncStorageData } from "../../constants/async-storage";

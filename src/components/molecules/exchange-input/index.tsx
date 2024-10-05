@@ -12,7 +12,6 @@ export const ExchangeInput = ({
   estimatedSaving,
   changeType,
 }: ExchangeInputProps) => {
-  console.log(estimatedSaving);
   return (
     <View
       className={`bg-white relative h-[290px] rounded-bl-xl rounded-br-xl px-4 gap-6 flex-col justify-center`}

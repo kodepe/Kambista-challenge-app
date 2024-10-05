@@ -56,7 +56,7 @@ export const ConstancyCard = () => {
         </Text>
         <Button
           onPress={() => {
-            navigation.navigate("home");
+            navigation.navigate("exchange-amount");
           }}
           buttonColor="#00E3C2"
           textColor="#060F26"
@@ -67,7 +67,7 @@ export const ConstancyCard = () => {
         </Button>
         <Pressable
           onPress={() => {
-            navigation.navigate("home");
+            navigation.navigate("exchange-amount");
           }}
         >
           <Text className="underline text-center font-semibold my-6">

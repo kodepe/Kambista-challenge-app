@@ -2,13 +2,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { UseAuthContext } from "../contexts/auth/auth-hook";
-import HomePage from "../components/pages/home/home";
 import { AuthRouter } from "./auth-router";
-import AccountsPage from "../components/pages/accounts/accounts";
-import RegisterAccountPage from "../components/pages/register-account/register-account";
-import SentConstancyPage from "../components/pages/sent-constancy/sent-constancy";
+import { ExchangeRouter } from "./exchange-router";
+import { AccountsRouter } from "./accounts-router";
+import { RootStackParamList } from "./interfaces";
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RouterApp() {
   const { session } = UseAuthContext();
@@ -16,26 +15,16 @@ export default function RouterApp() {
     return <AuthRouter />;
   }
   return (
-    <NavigationContainer >
+    <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="home"
-          component={HomePage}
+          name="exchange"
+          component={ExchangeRouter}
           options={{ headerShown: false }}
         />
         <Stack.Screen
           name="accounts"
-          component={AccountsPage}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="register-accounts"
-          component={RegisterAccountPage}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="sent-constancy"
-          component={SentConstancyPage}
+          component={AccountsRouter}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

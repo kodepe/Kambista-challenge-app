@@ -14,12 +14,16 @@ const Input = ({
 }: InputProps) => {
   return (
     <View className={containerClassName}>
-      <Text
-        style={error ? InputStyleSheet.labelError : InputStyleSheet.labelCommon}
-        className="mb-2"
-      >
-        {label}
-      </Text>
+      {label && (
+        <Text
+          style={
+            error ? InputStyleSheet.labelError : InputStyleSheet.labelCommon
+          }
+          className="mb-2"
+        >
+          {label}
+        </Text>
+      )}
       <TextInput
         value={value}
         onChangeText={onChangeText}

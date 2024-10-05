@@ -3,7 +3,7 @@ import { BottomBar } from "../../atoms/bottom-bar";
 import { ExchangeForm } from "../../organisms/exchange-form";
 import { HeaderLight } from "../../atoms/header/header-light";
 
-const HomePage = () => {
+const ExchangeAmountage = () => {
   return (
     <View className=" flex-1">
       <HeaderLight />
@@ -14,4 +14,4 @@ const HomePage = () => {
     </View>
   );
 };
-export default HomePage;
+export default ExchangeAmountage;

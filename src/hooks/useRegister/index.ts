@@ -56,6 +56,7 @@ export const UseRegister = () => {
     if (!_isValid) {
       return;
     }
+    /* Simulacion de creacion de cuenta */
     setProfile(form);
     getProfile();
   };

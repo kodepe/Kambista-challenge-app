@@ -4,6 +4,7 @@ import RouterApp from "./src/routers";
 import { StatusBar } from "expo-status-bar";
 import { PaperProvider } from "react-native-paper";
 import { AuthProvider } from "./src/contexts/auth/auth-provider";
+import { UserProvider } from "./src/contexts/user/user-provider";
 
 export default function App() {
   return (
@@ -11,7 +12,9 @@ export default function App() {
       <View className="flex-1 bg-[#FFF]" style={{ backgroundColor: "#FFF" }}>
         <StatusBar hidden />
         <AuthProvider>
-          <RouterApp />
+          <UserProvider>
+            <RouterApp />
+          </UserProvider>
         </AuthProvider>
       </View>
     </PaperProvider>
