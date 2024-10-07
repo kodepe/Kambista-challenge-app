@@ -4,9 +4,11 @@ import MoneyCerdito from "./../../../../assets/images/icons/monedas-cerdito.svg"
 import Star from "./../../../../assets/images/icons/star.svg";
 import { Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+import { UseExchange } from "../../../hooks/useExhcange";
 
 export const ConstancyCard = () => {
   const navigation = useNavigation();
+  const { reset } = UseExchange();
   return (
     <View className="mx-6 flex-1 pb-4">
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -67,6 +69,7 @@ export const ConstancyCard = () => {
         </Button>
         <Pressable
           onPress={() => {
+            reset();
             navigation.navigate("exchange-amount");
           }}
         >

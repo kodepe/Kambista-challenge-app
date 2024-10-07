@@ -10,6 +10,7 @@ export const ExchangeInput = ({
   onChangeSell,
   onChangeOrder,
   estimatedSaving,
+  sellValue,
   changeType,
 }: ExchangeInputProps) => {
   return (
@@ -50,7 +51,7 @@ export const ExchangeInput = ({
             keyboardType="number-pad"
             className="font-bold"
             placeholder="Ingresa el monto"
-            value={estimatedSaving?.toLocaleString()}
+            value={sellValue?.toLocaleString()}
             onChangeText={onChangeSell}
           />
         </View>

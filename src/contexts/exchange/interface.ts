@@ -8,6 +8,7 @@ export interface ExchangeDataFormProps {
   bank: SelectItemProps;
   accountSelected: SelectItemProps;
   isDollarToSole: boolean;
+  currency: string;
 }
 export interface ExchangeContextProps {
   form: ExchangeDataFormProps;

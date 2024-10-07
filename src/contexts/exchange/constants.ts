@@ -9,6 +9,7 @@ export const ExchangeContextDefault: ExchangeContextProps = {
     sellValue: "",
     accountSelected: { label: "", value: "" },
     isDollarToSole: false,
+    currency: "",
   },
   setForm: (v) => {},
 };
