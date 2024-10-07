@@ -1,21 +1,14 @@
 import { useState } from "react";
 import { TabProps } from "../../components/atoms/tabs/interface";
-import {
-  calcularAhorroEstimado,
-  calcularCantidadRecibida,
-} from "../../utils/money-exchange";
 import { useNavigation } from "@react-navigation/native";
+import { UseExchangeContext } from "../../contexts/exchange/exchange-hook";
 
 const defaultTypeExchange = 3.72;
 
 export const UseExchange = () => {
+  const { form, setForm } = UseExchangeContext();
   const router = useNavigation();
   const [tab, setTab] = useState("2");
-  const [form, setForm] = useState({
-    buyValue: "",
-    sellValue: "",
-    isDollarToSole: false,
-  });
   const [state, setState] = useState({ buy: 3.62, sell: 3.84 });
   const [estimatedSaving, setEstimatedSavings] = useState(0);
   const TABS: TabProps[] = [

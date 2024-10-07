@@ -13,7 +13,7 @@ export const AppHeader = ({ close, goBack, logo }: AppHeaderProps) => {
   const { logout } = UseAuthContext();
   const navigation = useNavigation();
   return (
-    <View className="relative">
+    <View className="relative bg-white">
       <View className="absolute z-10 items-center justify-between flex-row w-full pl-4">
         {goBack && (
           <Pressable

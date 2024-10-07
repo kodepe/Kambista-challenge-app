@@ -1,18 +1,18 @@
 import { View } from "react-native";
 import { AppHeader } from "../../atoms/header";
-import { SentConstancyFormCard } from "../../organisms/sent-constancy-form";
+import { ExchangeResumenCard } from "../../organisms/exchange-resumen-card";
 import Stepper from "../../molecules/stepper";
 import { stepsDefault } from "../../../contexts/exchange/constants";
 
-const SentConstancyCodePage = () => {
+const ExchangeResumenPage = () => {
   return (
     <View className=" flex-1">
-      <AppHeader logo />
-      <Stepper steps={stepsDefault} currentStep={2} />
+      <AppHeader logo close goBack />
+      <Stepper steps={stepsDefault} currentStep={1} />
       <View className="flex-1">
-        <SentConstancyFormCard />
+        <ExchangeResumenCard />
       </View>
     </View>
   );
 };
-export default SentConstancyCodePage;
+export default ExchangeResumenPage;

@@ -17,7 +17,6 @@ export const ExchangeForm = () => {
     estimatedSaving,
     TABS,
   } = UseExchange();
-
   return (
     <View>
       <View className=" mt-10 rounded-xl flex-1 px-6">

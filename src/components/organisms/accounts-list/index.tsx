@@ -24,7 +24,7 @@ export const AccountList = () => {
         placeholder="Cuentas bancarias"
         setValue={(value) => {
           setVal(value);
-          navigation.navigate("exchange-data", { value: val.value });
+          navigation.navigate("exchange-data", { value });
         }}
       />
       <ButtonPlus onPress={() => navigation.navigate("accounts-register")} />

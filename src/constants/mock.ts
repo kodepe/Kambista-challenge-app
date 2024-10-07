@@ -5,3 +5,11 @@ export const banksList = [
   { label: "BCP", value: "BCP" },
   { label: "Interbank", value: "INTERBANK" },
 ];
+
+export const foundsOrigin = [
+  { label: "Salario", value: "Salario" },
+  { label: "Ahorros", value: "Ahorros" },
+  { label: "Venta de activos", value: "Venta de activos" },
+  { label: "Prestamos", value: "Prestamos" },
+  { label: "Inversiones", value: "Inversiones" },
+];
